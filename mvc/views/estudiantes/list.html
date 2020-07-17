@@ -1,0 +1,22 @@
+$def with (query, lenght)
+<h1>Documentos creados</h1>
+
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Primer apellido</th>
+        <th scope="col">Segundo apellido</th>
+      </tr>
+    </thead>
+    <tbody>
+      $for row in range(0, lenght):
+        <tr>
+          <td>$query[row]['_id']</td>
+          <td>$query[row]['nombre']</td>
+          <td>$query[row]['ape_pat']</td>
+          <td>$query[row]['ape_mat']</td>
+        </tr>
+    </tbody>
+  </table>
